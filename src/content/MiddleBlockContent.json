@@ -1,6 +1,5 @@
 {
-    "title": "Introduce your product quickly & effectively",
-    "text": "Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.",
+    "title": "How to use SpotifyDown?",
+    "text": "Here's a simple tutorial how to use SpotifyDown: 1. Open your Spotify App 2. Find the song album you'd like to download 3. Click on the \"3 dots\" button. The button looks like this: 4. Click \"Share\" and then \"Copy Link\" button 5. Paste copied link above and press \"Submit\" 6. Wait for the processing to finish and click \"Download\" button",
     "button": "Get started"
-  }
-  
+}
