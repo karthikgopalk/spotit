@@ -5,7 +5,10 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Loader from "../../Loader";
 import { TextField, InputAdornment, IconButton } from "@mui/material";
 
-const Search: React.FC = () => {
+interface SearchProps {
+  setShowCard: (showCard: boolean) => void;
+}
+const Search: React.FC<SearchProps> = ({ setShowCard }) => {
   const [loading, setLoading] = useState(false);
   const [searchText, setSearchText] = useState("");
 
@@ -28,6 +31,7 @@ const Search: React.FC = () => {
     setTimeout(() => {
       if (searchText.startsWith("https://open.spotify.com")) {
         alert("Success");
+        setShowCard(true);
       } else {
         alert("Please enter a valid URL");
       }
@@ -39,7 +43,7 @@ const Search: React.FC = () => {
   const handleBlur = () => setIsFocused(false);
 
   const handleKeyDown = (e: any) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && searchText.length > 0) {
       e.preventDefault();
       handleSubmit();
     }
@@ -48,7 +52,7 @@ const Search: React.FC = () => {
   return (
     <main>
       {loading && <Loader />}
-      <h1>Spotify Downloader</h1>
+      <h1>Spotify Downloaders</h1>
       <TextField
         fullWidth
         className="input"
